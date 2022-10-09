@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg {
+  height: 100vh;
+  background: -moz-linear-gradient(110deg, #3b5ffd 20%, #574bff 20%);
+  background: linear-gradient(110deg, #f1f1f1 48%, #da6030 48%);
+}
+.list {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 3vmin;
+}
+.name-pokemon {
+  background: -moz-linear-gradient(110deg, #3b5ffd 20%, #574bff 20%);
+  background: linear-gradient(110deg, #727272 35%, #da6030 35%);
+}
+.info {
+  background-color: #021921;
+}
+.bg-info {
+  background-color: #da6030;
+}
+.bg-active {
+  background: linear-gradient(110deg, #f1f1f1 55%, #da6030 55%);
+}
+.paginattionBttns {
+  display: flex;
+  padding: 0 1rem;
+  position: relative;
+  list-style: none;
+}
+.previousBttn {
+  background-color: #021921;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: whitesmoke;
+  margin-right: 1rem !important;
+}
+.nextBttn {
+  background-color: #021921;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem !important;
+}
+.paginattionBttns a {
+  margin: 0 0.2vw;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.3rem;
+  border: 1px solid #021921;
+  cursor: pointer;
+  color: whitesmoke;
+}
+.paginattionBttns a:hover {
+  background-color: #023241;
+  color: whitesmoke !important;
+}
+.paginationActive a {
+  background-color: #023241;
+  color: white !important;
+}
