@@ -1,13 +1,14 @@
-import  { Fragment } from "react";
+import  {  Fragment } from "react";
 import { useGetOneBookQuery } from "../query-rtk/querySlice";
 
-type Props = {
-  id: string;
+interface Props<T> {
+  id: T
 };
 
-export default function Detail({ id }: Props) {
+
+const Details = <T extends number | string> ({id} : Props<T>) => {
   const { data, error, isLoading } = useGetOneBookQuery(id);
-  let hp = data?.stats.map((e) => e.base_stat).slice(0, 1);
+  let hp = data?.stats.map((e: any) => e.base_stat).slice(0, 1);
   let attack = data?.stats.map((e) => e.base_stat).slice(1, 2);
   let deffens = data?.stats.map((e) => e.base_stat).slice(2, 3);
 
@@ -94,3 +95,5 @@ export default function Detail({ id }: Props) {
     </Fragment>
   );
 }
+
+export default Details
